@@ -1,14 +1,194 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      
-    </title>
-    <style>
-      
-    </style>
-  </head>
-  <body>
-    <h3>Under Contraction Right Now</h3>
-    <progress></progress>
-  </body>
-</html>
+<head>
+	<title>Talkmate chat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-image: url("background.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			animation: backgroundLoop 30s infinite;
+		}
+
+		@keyframes backgroundLoop {
+			0%   {background-image: url("background1.jpg");}
+			25%  {background-image: url("background2.jpg");}
+			50%  {background-image: url("background3.jpg");}
+			75%  {background-image: url("background4.jpg");}
+			100% {background-image: url("background1.jpg");}
+		}
+
+		.container {
+			margin: 0 auto;
+			max-width: 800px;
+			padding: 50px;
+			color: #FFF;
+			text-align: center;
+		}
+
+		h2 {
+		  position: center;
+		  top: 10%;
+		  right: 2%;
+			font-size: 30px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		button {
+		  position: center;
+		  top: 35%;
+		  left: 17%;
+			background-color: #1ABC9C;
+			border: none;
+			color: #FFF;
+			padding: 10px 20px;
+			font-size: 24px;
+			border-radius: 5px;
+			margin: 20px;
+			cursor: pointer;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		button:hover {
+			background-color: #16A085;
+		}
+
+		.support {
+		  position: center;
+		  top: 40%;
+		  right: 19%;
+			background-color: #2980B9;
+			padding: 10px 20px;
+			color: #FFF;
+			text-decoration: none;
+			border-radius: 5px;
+			margin: 20px;
+			font-size: 24px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+		}
+		.p {
+		  position: center;
+		  top: 28%;
+		  left: 0%;
+		  letter-spacing: 0.5px;
+		}
+				.p1 {
+		  position: absolute;
+		  top: 70%;
+		  left: 0%;
+		  letter-spacing: 1px;
+		}
+
+		.support:hover {
+			background-color: #2471A3;
+		}
+
+		.picture1, .picture2, .picture3, .picture4 {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+		}
+
+		.picture1 {
+			background-image: url("picture1.jpg");
+			animation: pictureLoop1 20s infinite;
+		}
+
+		.picture2 {
+			background-image: url("picture1.jpg");
+			animation: pictureLoop2 30s infinite;
+		}
+
+		.picture3 {
+			background-image: url("picture1.jpg");
+			animation: pictureLoop3 40s infinite;
+		}
+
+		.picture4 {
+			background-image: url("picture1.jpg");
+			animation: pictureLoop4 50s infinite;
+		}
+
+		@keyframes pictureLoop1 {
+			0%   {opacity: 1;}
+			25%  {opacity: 0.75;}
+			50%  {opacity: 0.5;}
+			75%  {opacity: 0.25;}
+			100% {opacity: 1;}
+		}
+
+		@keyframes pictureLoop2 {
+			0%   {transform: scale(1);}
+			50%  {transform: scale(1.5);}
+			100% {transform: scale(75);}
+		
+		 @keyframes pictureLoop3 {
+ 	0%   {transform: translateX(0);}
+ 	50%  {transform: translateX(200px);}
+ 	100% {transform: translateX(0);}
+ }
+
+ @keyframes pictureLoop4 {
+ 	0%   {transform: translateY(0);}
+ 	50%  {transform: translateY(-200px);}
+ 	100% {transform: translateY(0);}
+ }
+</style>
+</head>
+<body>
+	<div class="picture1"></div>
+	<div class="picture2"></div>
+	<div class="picture3"></div>
+	<div class="picture4"></div>
+	<div class="container">
+	<h2>Talkmate chat Download</h2>
+	<p class="p">
+	  Download this app now and enjoy it with your new friends</p>
+	<button onclick="openDialog()">Download Now</button>
+
+  <dialog id="myDialog">
+    <p>Thank you for downloading Talkmate app! If you have friends who might also enjoy the app, feel free to invite them as well. Let's build a bigger and more fun Talkmate community together!"
+
+
+
+</p>
+    <button id="shareButton" onlick="openDialog()">Invite</button>
+    <a href="https://github.com/Nelwyn3953/talkmatechat/raw/main/Talkmate%20Chat.apk">
+    <button onclick="closeDialog()">Download</button>
+    </a>
+  </dialog>
+
+  <script>
+    function openDialog() {
+      var myDialog = document.getElementById("myDialog");
+      myDialog.showModal();
+    }
+
+    function closeDialog() {
+      var myDialog = document.getElementById("myDialog");
+      myDialog.close();
+    }
+  </script>
+  <script>
+  document.getElementById("shareButton").addEventListener("click", function() {
+    navigator.share({
+      title: "Talkmate",
+      text: "Good day! I would like to invite you to the Talkmate app, where you can find new friends and chat with them. This app is fun and easy to use, and I'm sure you'll enjoy it here. Join me in exploring the Talkmate community.",
+      url: "https://talkmatchat.page.link/com"
+    })
+  });
+</script>
+
+  
+  
+	<a href="#" class="support">Get Support</a>
+	<p class="p1">MORE DATAILS<br><br>TalkMate Chat is all about connecting people and building new friendships. Our goal is to provide a safe and welcoming platform for you to meet like-minded individuals and engage in meaningful conversations.
+	Develop by NELWYN ESCODO collaboration with SKY_Chat</p>
+</div>
+</body>
+</html
